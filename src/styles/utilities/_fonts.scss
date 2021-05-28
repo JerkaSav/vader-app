@@ -1,9 +1,9 @@
-@font-face {
-  font-family: Righteous;
-  src: url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+h1 {
+  font-family: 'Righteous', cursive;
+  font-style: normal;
+  font-weight: normal;
 }
 
-@font-face {
-  font-family: Work-sans;
-  src: url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+* > *:not(h1) {
+  font-family: 'Work Sans', sans-serif;
 }
