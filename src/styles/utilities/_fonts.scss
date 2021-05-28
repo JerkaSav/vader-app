@@ -1,10 +1,18 @@
+@import './color';
+
 h1 {
   @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
   font-family: 'Righteous', cursive;
+  color: $font-color;
 }
 
-*:not(h1),
+body :not(h1),
 * > *:not(h1) {
   @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
   font-family: 'Work Sans', sans-serif;
+  color: $font-color;
+}
+
+.degree {
+  font-size: 4rem;
 }

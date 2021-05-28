@@ -1,10 +1,17 @@
 import './styles/main.scss';
+import Loading from './views/loading';
+import Search from './views/search';
+import Weather from './views/weather';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <h1>VÄDER APP</h1>
-      <h2>Hello</h2>
+      <Switch>
+        <Route path="/" component={Loading} exact />
+        <Route path="/search" component={Search} />
+        <Route path="/weather" component={Weather} />
+      </Switch>
     </div>
   );
 }
