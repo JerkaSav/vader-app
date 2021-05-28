@@ -1,9 +1,10 @@
 h1 {
+  @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
   font-family: 'Righteous', cursive;
-  font-style: normal;
-  font-weight: normal;
 }
 
+*:not(h1),
 * > *:not(h1) {
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
   font-family: 'Work Sans', sans-serif;
 }
