@@ -1,0 +1,32 @@
+@import './utilities/color';
+.light {
+  background-color: $bg-light;
+}
+
+.sunny {
+  background-color: $bg-sunny;
+}
+
+.sunny-cloudy {
+  background-color: $bg-sunny-cloudy;
+}
+
+.cloudy {
+  background-color: $bg-cloudy;
+}
+
+.foggy {
+  background-color: $bg-foggy;
+}
+
+.dark-cloudy {
+  background-color: $bg-dark-cloudy;
+}
+
+.raining {
+  background-color: $bg-raining;
+}
+
+.snowing {
+  background-color: $bg-snowing;
+}

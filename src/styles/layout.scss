@@ -1,10 +1,11 @@
 @import './utilities/color';
+
 .grid-system {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   height: 100vh;
-  background-color: $bg-light;
+  background: $bg-light;
 }
 
 .loading-screen {
@@ -42,7 +43,8 @@ input {
   font-size: 20px;
   text-align: center;
   &:focus {
-    outline: 1px solid white;
+    outline: none;
+    border: 1px solid white;
   }
 }
 
@@ -83,7 +85,24 @@ input {
   grid-column: 1 / 13;
   grid-row: 9 /13;
   list-style-type: none;
+  padding: 0px;
   li {
     margin-top: 10px;
+  }
+}
+
+.small-img {
+  max-width: 20px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+
+  p {
+    margin-left: 2rem;
+  }
+  h4 {
+    margin-left: 2rem;
   }
 }
