@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 import { Fragment } from 'react';
+import '../styles/utilities/_animations.scss';
 
 function WeatherInfo({ img }) {
   let date = new Date();
-  console.log(date);
   let time = date.getHours() + ':' + date.getMinutes();
 
   const weather = useSelector((state) => state.weather);
@@ -12,14 +12,14 @@ function WeatherInfo({ img }) {
   let weatherType = weather.list[0].weather[0].main;
   return (
     <Fragment>
-      <h3 className="weather-type">{weatherType}</h3>
+      <h3 className="weather-type opacity">{weatherType}</h3>
       <div className="flex">
-        <img src={img} alt="sunny" className="weather-img"></img>
+        <img src={img} alt="sunny" className="weather-img opacity"></img>
       </div>
-      <h2 className="degree">{celius}°</h2>
+      <h2 className="degree opacity">{celius}°</h2>
       <div className="city-time">
-        <h4 className="city">{city}</h4>
-        <h5 className="time">{time}</h5>
+        <h4 className="city opacity">{city}</h4>
+        <h5 className="time opacity">{time}</h5>
       </div>
     </Fragment>
   );

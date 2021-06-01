@@ -6,10 +6,10 @@ import raining from '../assets/smallWeather/raining.svg';
 import snowing from '../assets/smallWeather/snowing.svg';
 import SunnyCloudy from '../assets/smallWeather/sunny-cloudy.svg';
 import sunny from '../assets/smallWeather/sunny.svg';
+import '../styles/utilities/_animations.scss';
 
-function Forecast({ hour }) {
+function Forecast({ hour, cN }) {
   const weather = hour;
-  console.log(weather);
   const [img, setImg] = useState();
   let celius = Math.floor(weather.main.temp - 273.15) + '°';
   let humidity = weather.main.humidity + '%';
@@ -46,7 +46,7 @@ function Forecast({ hour }) {
   }, [weatherType]);
 
   return (
-    <li className="flex-container">
+    <li className={'flex-container ' + cN}>
       <div className="flex-container">
         <img className="small-img" src={img} alt="img" />
         <h4>{time}</h4>

@@ -1,16 +1,18 @@
 import logo from '../assets/icons/logo.svg';
 import geo from '../assets/icons/geolocation.svg';
 import search from '../assets/icons/search-icon.svg';
+import '../styles/utilities/_animations.scss';
 import { useHistory } from 'react-router-dom';
 
 function Header({ updateCords }) {
   const history = useHistory();
 
-  console.log(history.location.pathname);
   let img;
   let cords;
+  let animations = 'off';
   if (history.location.pathname === '/search') {
     img = geo;
+    animations = 'pulse';
   } else {
     img = search;
   }
@@ -38,10 +40,10 @@ function Header({ updateCords }) {
   return (
     <div className="Header">
       <div className="logo">
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" onClick={() => history.push('/')} />
       </div>
       <div className="search">
-        <img src={img} alt="search" onClick={handleClick} />
+        <img src={img} alt="search" className={animations} onClick={handleClick} />
       </div>
     </div>
   );

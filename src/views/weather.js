@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import { useSelector } from 'react-redux';
 import WeatherInfo from '../components/WeatherInfo';
+
 import { useEffect, useState } from 'react';
 import Sunny from '../assets/weather/Sunny1.png';
 import Cloudy from '../assets/weather/cloudy.png';
@@ -61,7 +62,7 @@ function Weather() {
         setColor(colors.light);
         setImg(Sunny);
     }
-  }, []);
+  }, [weatherType]);
 
   useEffect(() => {
     document.querySelector('.changing-background').style.background = color;
@@ -75,7 +76,7 @@ function Weather() {
       <ul className="forecast">
         {weather.list.map((hour, index) => {
           if (index !== 0) {
-            return <Forecast key={index} hour={hour} />;
+            return <Forecast key={index} hour={hour} cN={'forecast-' + index} />;
           }
         })}
       </ul>
